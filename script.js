@@ -1,6 +1,13 @@
 playButton.addEventListener('touchstart', (event) => {
-    alert("Button pressed!"); // Check if this alert shows up
-    event.preventDefault();
+    event.preventDefault(); // Prevent default behavior
+    playAudio();
+});
+
+playButton.addEventListener('click', (event) => {
+    playAudio();
+});
+
+function playAudio() {
     const audio = new Audio('https://raw.githubusercontent.com/AakLak/YoHoZomBo/main/zomebocom.mp3');
     audio.play()
         .then(() => {
@@ -9,4 +16,4 @@ playButton.addEventListener('touchstart', (event) => {
         .catch(error => {
             console.error("Error playing audio:", error);
         });
-});
+}
