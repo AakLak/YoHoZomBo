@@ -7,3 +7,10 @@ body {
     color: #fff;
     text-align: center;
 }
+
+@font-face {
+  font-family: 'CustomFont';
+  src: url('fonts/custom-font.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
